@@ -1,9 +1,8 @@
 # Prompt the user for their current age
-# Define variables
-age = 30
-year = 27
+current_age = int(input("How old are you? "))
 
-# Calculate the user age in 2050 This year is 2023
-addition_result = age + year
-# print result
-print(f"In 2050, you will be {addition_result} years old.")
+# Calculate the user's age in the year 2050
+age_in_2050 = current_age + 27
+
+# Print the result
+print(f"In 2050, you will be {age_in_2050} years old.")
