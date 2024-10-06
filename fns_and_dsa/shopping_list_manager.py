@@ -20,7 +20,6 @@ def main():
                 item_to_add = input("Enter the item to add: ")
                 shopping_list.append(item_to_add)
                 print(f'Item "{item_to_add}" has been added.')
-                pass
             elif choice == '2':
                 # Prompt for and remove an item
                 item_to_remove = input("Enter the item to remove: ")
@@ -29,26 +28,23 @@ def main():
                     print(f'Item "{item_to_remove}" has been removed.')
                 else:
                     print(f'Error: Item "{item_to_remove}" not found in the list.')
-                    pass
             elif choice == '3':
                 # Display the shopping list
-
                 if shopping_list:
                     print("Your shopping list contains:")
                     for item in shopping_list:
                         print(f"- {item}")
                 else:
                     print("Your shopping list is empty.")
-                    pass
             elif choice == '4':
                 print("Goodbye!")
                 break  # Exit the loop and the program
         else:
             print("Invalid input. Please enter a number corresponding to your choice.")
-            continue  # Return to the start of the loop
 
-            # Handle invalid choices outside of the digit check
-            if choice not in ['1', '2', '3', '4']:
-                print("Invalid choice. Please try again.")
+        # Handle invalid choices outside of the digit check
+        if choice not in ['1', '2', '3', '4']:
+            print("Invalid choice. Please try again.")
+
 if __name__ == "__main__":
     main()
