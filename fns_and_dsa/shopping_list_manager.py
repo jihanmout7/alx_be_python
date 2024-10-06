@@ -24,10 +24,15 @@ def main():
                 print("Invalid choice. Please enter a number.")
 
         if choice == 1:
-            # Prompt for and add an item
-            new_item = input("Enter item name: ")
-            shopping_list.append(new_item)
-            print(f"{new_item} added to the list.")
+            # Validate input for adding item
+            while True:
+                new_item = input("Enter item name: ")
+                if new_item.strip():  # Check if item name is not empty
+                    shopping_list.append(new_item)
+                    print(f"{new_item} added to the list.")
+                    break  # Valid item name, break out of validation loop
+                else:
+                    print("Please enter a valid item name.")
 
         elif choice == 2:
             # Prompt for and remove an item
