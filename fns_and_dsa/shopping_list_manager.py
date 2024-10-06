@@ -10,15 +10,26 @@ def main():
     shopping_list = []
     while True:
         display_menu()
-        choice = input("Enter your choice: ")
 
-        if choice == '1':
+        # Validate user input for numeric choice
+        while True:
+            choice = input("Enter your choice (1-4): ")
+            try:
+                choice = int(choice)
+                if 1 <= choice <= 4:
+                    break  # Valid choice, break out of validation loop
+                else:
+                    print("Invalid choice. Please enter a number between 1 and 4.")
+            except ValueError:
+                print("Invalid choice. Please enter a number.")
+
+        if choice == 1:
             # Prompt for and add an item
             new_item = input("Enter item name: ")
             shopping_list.append(new_item)
             print(f"{new_item} added to the list.")
 
-        elif choice == '2':
+        elif choice == 2:
             # Prompt for and remove an item
             remove_item = input("Enter item name to remove: ")
             if remove_item in shopping_list:
@@ -27,7 +38,7 @@ def main():
             else:
                 print(f"{remove_item} not found in the list.")
 
-        elif choice == '3':
+        elif choice == 3:
             # Display the shopping list
             if shopping_list:
                 print("Shopping List:")
@@ -36,7 +47,7 @@ def main():
             else:
                 print("Your shopping list is currently empty.")
 
-        elif choice == '4':
+        elif choice == 4:
             print("Goodbye!")
             break
 
