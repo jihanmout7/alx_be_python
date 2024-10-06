@@ -26,7 +26,7 @@ def main():
         if choice == 1:
             # Validate input for adding item
             while True:
-                new_item = input("Enter item name: ")
+                new_item = input("Enter the item to add: ")
                 if new_item.strip():  # Check if item name is not empty
                     shopping_list.append(new_item)
                     print(f"{new_item} added to the list.")
