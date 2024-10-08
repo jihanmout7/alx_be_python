@@ -1,6 +1,6 @@
-# temp_conversion_tool.py  
+# temp_conversion_tool.py
 
-# Define Global Conversion Factors  
+# Define Global Conversion Factors
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
 FREEZING_POINT_FAHRENHEIT = 32
